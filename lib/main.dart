@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_import, duplicate_ignore
 
 import 'package:e_commerce/appColors/app_colors.dart';
 import 'package:e_commerce/screens/login_screen/login_screen.dart';

@@ -28,6 +28,7 @@ flutter:
 
   assets:
     - images/
+    # - lib/vegetables_images
 
   fonts:
     - family: NovaFlat
