@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unused_import, duplicate_ignore
 
 import 'package:e_commerce/appColors/app_colors.dart';
+import 'package:e_commerce/myBottomBar/my_Bottom_Bar.dart';
 import 'package:e_commerce/screens/login_screen/login_screen.dart';
 import 'package:e_commerce/screens/signup_screen/signup_screen.dart';
 import 'package:flutter/material.dart';
@@ -35,8 +36,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // ignore: prefer_const_constructors
-      home: LoginScreen(),
+      // home: LoginScreen(),
       // home: SignUpScreen(),
+      home: MyBottomBar(),
     );
   }
 }
