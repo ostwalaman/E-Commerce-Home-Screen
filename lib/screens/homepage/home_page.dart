@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, import_of_legacy_library_into_null_safe
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, import_of_legacy_library_into_null_safe, avoid_unnecessary_containers, unnecessary_string_escapes
 
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:e_commerce/appColors/app_colors.dart';
@@ -113,6 +113,70 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget buildFreshProducts(
+      {required String productImage,
+      required String productName,
+      required double productPrice}) {
+    return Container(
+      margin: EdgeInsets.only(
+        top: 30,
+        left: 30,
+        right: 20,
+        bottom: 20,
+      ),
+      height: 65,
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Material(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                side: BorderSide.none,
+              ),
+              child: Image.network(productImage),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    productName,
+                    style: HomeScreenStyles.freshProductsNameStyle,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            child: MaterialButton(
+              color: AppColors.baseLightPinkColor,
+              elevation: 0,
+              height: 45,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0.7),
+                side: BorderSide.none,
+              ),
+              onPressed: () {},
+              child: Text(
+                "\Rs. $productPrice",
+                style: HomeScreenStyles.freshProductsPriceStyle,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -152,6 +216,17 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                 ),
+                Divider(
+                  indent: 16,
+                  endIndent: 16,
+                ),
+                ShowAllWidget(
+                  leftText: 'Fresh',
+                ),
+                buildFreshProducts(
+                    productImage: 'images/Kale.jpg',
+                    productName: 'Kale',
+                    productPrice: 70),
               ],
             ),
 

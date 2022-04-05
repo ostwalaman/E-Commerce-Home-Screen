@@ -16,4 +16,16 @@ class HomeScreenStyles {
     color: Colors.grey,
     fontSize: 13,
   );
+
+  // Bottom Bar Style - Home Screen Style
+  static const TextStyle freshProductsNameStyle = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+  );
+
+  // Bottom Bar Style - Price Style
+  static const TextStyle freshProductsPriceStyle = TextStyle(
+    fontSize: 18,
+    color: AppColors.baseWhiteColor,
+  );
 }
