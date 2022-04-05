@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, import_of_legacy_library_into_null_safe
 
+import 'package:carousel_pro/carousel_pro.dart';
 import 'package:e_commerce/appColors/app_colors.dart';
 import 'package:e_commerce/data/home_page_data.dart';
 import 'package:e_commerce/styles/home_screen_styles.dart';
@@ -71,6 +72,47 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget buildAdvertisementPlace() {
+    return Padding(
+      padding: EdgeInsets.all(18.0),
+      child: SizedBox(
+        height: 170,
+        child: Carousel(
+          autoplay: true,
+          animationCurve: Curves.fastOutSlowIn,
+          animationDuration: Duration(microseconds: 1000),
+          showIndicator: false,
+          images: [
+            Container(
+              margin: EdgeInsets.only(right: 10),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    "https://blog.creatopy.com/wp-content/uploads/2019/03/creative-advertising-and-pop-culture-pop-culture-ads.png",
+                  ),
+                ),
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(right: 10),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                    "https://blog.creatopy.com/wp-content/uploads/2018/05/advertisement-ideas-inspiration-advertising.png",
+                  ),
+                ),
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -82,6 +124,7 @@ class HomePage extends StatelessWidget {
             ListView(
               physics: BouncingScrollPhysics(),
               children: [
+                buildAdvertisementPlace(),
                 ShowAllWidget(
                   leftText: 'Fresh Veggies',
                 ),
