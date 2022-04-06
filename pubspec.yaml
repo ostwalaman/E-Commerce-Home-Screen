@@ -29,6 +29,7 @@ flutter:
 
   assets:
     - images/
+    - images/Kale.jpg
     # - lib/vegetables_images
 
   fonts:
