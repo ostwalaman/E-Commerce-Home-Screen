@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, import_of_legacy_library_into_null_safe, avoid_unnecessary_containers, unnecessary_string_escapes
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, import_of_legacy_library_into_null_safe, avoid_unnecessary_containers, unnecessary_string_escapes, sized_box_for_whitespace
 
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:e_commerce/appColors/app_colors.dart';
@@ -225,8 +225,8 @@ class HomePage extends StatelessWidget {
                 ),
                 buildFreshProducts(
                   productImage:
-                      "http://bigbasket.com/media/uploads/p/l/10000085-2_1-fresho-chinese-cabbage.jpg",
-                  productName: 'Cabbage',
+                      "https://www.bigbasket.com/media/uploads/p/l/10000331_13-fresho-onion-sambhar.jpg",
+                  productName: 'Onions',
                   productPrice: 70,
                 ),
                 buildFreshProducts(
@@ -234,6 +234,39 @@ class HomePage extends StatelessWidget {
                       "https://bigbasket.com/media/uploads/p/l/10000066_25-fresho-cabbage.jpg",
                   productName: 'Cabbage',
                   productPrice: 70,
+                ),
+                buildFreshProducts(
+                  productImage:
+                      'https://www.bigbasket.com/media/uploads/p/l/10000323-2_13-fresho-capsicum-yellow.jpg',
+                  productName: 'Yellow Capsicum',
+                  productPrice: 70,
+                ),
+                ShowAllWidget(
+                  leftText: 'History',
+                ),
+                Container(
+                  height: 240,
+                  child: GridView.builder(
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    primary: true,
+                    itemCount: singleProductData.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 1,
+                      childAspectRatio: 1.5,
+                    ),
+                    itemBuilder: (context, index) {
+                      var data = singleProductData[index];
+                      return SingleProductWidget(
+                        onPressed: () {},
+                        productImage: data.productImage,
+                        // productModel: data.productModel,
+                        productName: data.productName,
+                        // productOldPrice: data.productOldPrice,
+                        productPrice: data.productPrice,
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
