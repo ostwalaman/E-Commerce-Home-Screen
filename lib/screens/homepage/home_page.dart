@@ -3,6 +3,9 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:e_commerce/appColors/app_colors.dart';
 import 'package:e_commerce/data/home_page_data.dart';
+import 'package:e_commerce/screens/exotic_veggies_data.dart';
+import 'package:e_commerce/screens/seasonal_data.dart';
+import 'package:e_commerce/screens/veggies_data.dart';
 import 'package:e_commerce/styles/home_screen_styles.dart';
 import 'package:e_commerce/svgImages/svg_images.dart';
 import 'package:e_commerce/widgets/singleProduct_widget.dart';
@@ -272,9 +275,12 @@ class HomePage extends StatelessWidget {
             ),
 
             // Center(child: Text("All Types of Vegetables")),
-            Center(child: Text("All Time Vegetables")),
-            Center(child: Text("Exotic Vegetables")),
-            Center(child: Text("Seasonal Vegetables")),
+            // Center(child: Text("All Time Vegetables")),
+            VeggiesData(),
+            ExoticVeggiesData(),
+            SeasonalVeggiesData(),
+            // Center(child: Text("Exotic Vegetables")),
+            // Center(child: Text("Seasonal Vegetables")),
           ],
         ),
       ),
