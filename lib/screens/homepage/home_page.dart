@@ -1,8 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, import_of_legacy_library_into_null_safe, avoid_unnecessary_containers, unnecessary_string_escapes, sized_box_for_whitespace
 
-import 'package:carousel_pro/carousel_pro.dart';
+import 'package:carousel_pro_nullsafety/carousel_pro_nullsafety.dart';
+// import 'package:carousel_pro/carousel_pro.dart';
 import 'package:e_commerce/appColors/app_colors.dart';
 import 'package:e_commerce/data/home_page_data.dart';
+// import 'package:e_commerce/routes/routes.dart';
+// import 'package:e_commerce/screens/detailScreen/detail_screen.dart';
 import 'package:e_commerce/screens/exotic_veggies_data.dart';
 import 'package:e_commerce/screens/seasonal_data.dart';
 import 'package:e_commerce/screens/veggies_data.dart';
@@ -209,7 +212,14 @@ class HomePage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       var data = singleProductData[index];
                       return SingleProductWidget(
-                        onPressed: () {},
+                        onPressed: () {
+                          // PageRouting.goToNextPage(
+                          //   context: context,
+                          //   navigateTo: DetailScreen(
+                          //     data: data,
+                          //   ),
+                          // );
+                        },
                         productImage: data.productImage,
                         // productModel: data.productModel,
                         productName: data.productName,

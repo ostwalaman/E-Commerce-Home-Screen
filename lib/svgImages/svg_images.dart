@@ -4,4 +4,6 @@ class SvgImages {
   static const String twitter = "images/Twitter.svg";
   static const String filter = "images/Setting.svg";
   static const String search = "images/Search.svg";
+  static const String heart = "images/Heart.svg";
+  static const String upload = "images/Upload.svg";
 }

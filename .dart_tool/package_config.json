@@ -14,10 +14,10 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "carousel_pro",
-      "rootUri": "file:///Volumes/Meet/Development/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_pro-1.0.0",
+      "name": "carousel_pro_nullsafety",
+      "rootUri": "file:///Volumes/Meet/Development/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_pro_nullsafety-1.0.2",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "characters",
@@ -194,7 +194,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-04-17T10:26:39.473951Z",
+  "generated": "2022-04-24T09:59:58.485467Z",
   "generator": "pub",
-  "generatorVersion": "2.16.1"
+  "generatorVersion": "2.16.2"
 }

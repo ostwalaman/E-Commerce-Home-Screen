@@ -21,6 +21,7 @@ class HomeScreenStyles {
   static const TextStyle freshProductsNameStyle = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
+    color: AppColors.baseDarkPinkColor,
   );
 
   // Bottom Bar Style - Price Style
