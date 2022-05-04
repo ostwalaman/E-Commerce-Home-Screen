@@ -103,16 +103,36 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ),
                 // Other Images of the Product go here //
-                // Row(
-                //   children: [
-                //     Expanded(
-                //       child: Container(
-                //         margin: EdgeInsets.only(right: 15, top: 15),
-                //         child: Image.network(widget.data.productSecondImage),
-                //       ),
-                //     ),
-                //   ],
-                // ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        margin: EdgeInsets.only(right: 15, top: 15),
+                        child: Image.network(widget.data.productImage),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        margin: EdgeInsets.only(right: 15, top: 15),
+                        child: Image.network(widget.data.productImage),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        margin: EdgeInsets.only(right: 15, top: 15),
+                        child: Image.network(widget.data.productImage),
+                      ),
+                    ),
+                  ],
+                ),
                 // Row(
                 //   children: [
                 //     Expanded(
